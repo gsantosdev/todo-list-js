@@ -2,7 +2,7 @@ var listElement = document.querySelector("#app ul");
 var inputElement = document.querySelector("#app input");
 var buttonElement = document.querySelector("#app button");
 
-var todos = JSON.parse(localStorage.getItem('list_todos')) || ['Comer','Estudar Javascript','Lavar Banheiro'];
+var todos = JSON.parse(localStorage.getItem('list_todos')) || ['Estudar HTML','Estudar Javascript','Estudar PHP'];
 
 function renderTodos()
 {
@@ -53,6 +53,8 @@ function removerTodo(pos)
     saveToStorage();
 }
 
+
+//Adicionando ao storage do navegador
 function saveToStorage()
 {
     localStorage.setItem('list_todos', JSON.stringify(todos));
